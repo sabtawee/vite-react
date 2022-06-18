@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import IMG from "admin-lte/dist/img/AdminLTELogo.png";
 import USER_IMG from "admin-lte/dist/img/user2-160x160.jpg";
 
@@ -42,13 +43,12 @@ export default function SidebarComponent() {
               data-accordion="false"
             >
               <li className="nav-item">
-                <a href="pages/widgets.html" className="nav-link">
+                <Link to="/order" className="nav-link">
                   <i className="nav-icon fas fa-th" />
                   <p>
-                    Widgets
-                    <span className="right badge badge-danger">New</span>
+                    Order
                   </p>
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <a href="pages/widgets.html" className="nav-link">

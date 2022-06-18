@@ -3,11 +3,15 @@ import { useEffect } from "react";
 import FooterComponent from "../components/FooterComponent";
 import NavbarComponent from "../components/NavbarComponent";
 import SidebarComponent from "../components/SidebarComponent";
+import LoginPage from "./LoginPage";
 
 export default function HomePage() {
   const fname = JSON.parse(localStorage.getItem("fname"));
   const member_id = JSON.parse(localStorage.getItem("member_id"));
 
+  if(!member_id){
+    return <LoginPage/>
+  }
   
   return (
     <div className="wrapper">

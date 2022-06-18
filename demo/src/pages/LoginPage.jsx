@@ -8,6 +8,7 @@ import "admin-lte/dist/js/adminlte.min.js";
 import { useState } from "react";
 import axios from "axios";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 export default function LoginPage() {
   const [fname, setFname] = useState("");
@@ -83,9 +84,9 @@ export default function LoginPage() {
               </div>
 
               <div className="col-4">
-                <button type="submit" className="btn btn-primary btn-block">
+                <Link to="/register" className="btn btn-primary btn-block">
                   Register
-                </button>
+                </Link>
               </div>
             </div>
           </div>

@@ -9,7 +9,7 @@ const Register = async (req, res) => {
         await Member.sequelize.query(`INSERT INTO members (f_name, l_name, password, email) VALUES ('${f_name}', '${l_name}', '${password}', '${email}');`)
         res.json("Register Success !!!")
     } catch (error) {
-        console.log({message: error.message})
+        res.json({message: error.message})
     }
 }
 
